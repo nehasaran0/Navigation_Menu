@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+.sidenav .closebtn1 {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+} 
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #818181;
+}
+
+
+#main {
+  transition: margin-left .5s;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  /* background-color: #04AA6D; */
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.code{
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    font: bold;
+    
+}
+
+.edit{
+    margin: 10px;
+}
+.editor{
+    text-align: center;
+    text-transform: capitalize;
+    color: #555;
+    font-size: 12PX;
+}
+.squre{
+    margin: 0 auto;
+    width: calc(100% - 2.75rem);
+    text-align: center;
+    position: relative;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    z-index: 2;
+    overflow: hidden;
+    padding: 3px;
+}
+a{
+    text-decoration: none;
+}
+.squre::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+115deg
+,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+    background-size: 50% 100%;
+}
+.startCoding {
+    position: relative;
+    z-index: 2;
+    padding: .875rem 0;
+    font-size: 1.1rem;
+    align-items: center;
+    background: #000;
+    border-radius: 3px;
+    display: block;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+}
+.some{
+    color: #47cf73;
+    /* margin: .875rem 0 0; */
+    background: #131417;;
+}
+.some::before{
+    content: "";
+    display: block;
+    margin: 0 1.35rem .75rem;
+    height: 3px;
+    background-color: var(--border-color,currentColor);
+    border-radius: 3px;
+
+}
+.some1{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    padding: .42rem 1.375rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: left;
+    line-height: 1;
+    transition: .2s ease;
+    background: none;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color:#131417;;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  visibility: visible;
+}
+div {
+    display: block;
+}
+
+
+</style>
+</head>
+
+
+
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <ul>
+        <div class="closebtn1" style="display: block;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+  <li><a class="active" href="#home">
+    <div class="code">CODEPEN</div>
+</a></li>
+<div class="edit">
+    <div class="editor">TRY YOUR ONLINE EDITOR</div>
+    
+    <a href="/pen/" class="squre">
+  <span class="startCoding">Start Coding</span></a>
+</div>
+
+<div class="some">
+  <li><a href="#news" class="some1">Trending</a></li>
+<li><a href="#contact" class="some1">Challenges</a></li>
+<li><a href="#about" class="some1">Spark</a></li>
+
+</div>
+
+</div></ul>
+
+<div id="main">
+    <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776; </span>
+    <div style="padding: 16px;">
+        <h1 style="font-size: 50px;color: chartreuse;">The best place to build,<br> test, and discover front-<br>end code.</h1>
+    <h2 style="color: white;">This is the right place</h2>
+  <p style="color: white;">CodePen is a social development environment for front-end designers and developers.<br> Build and deploy a website, show off your work, build test cases to learn and <br>debug, and find inspiration.
+
+</p>
+    </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
